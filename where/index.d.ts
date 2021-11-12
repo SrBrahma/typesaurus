@@ -8,7 +8,7 @@ export interface WhereQuery<_Model> {
 }
 export declare type BasicWhereFilter = Exclude<
   FirestoreWhereFilterOp,
-  'array-contains' | 'in'
+  'array-contains' | 'in' | 'not-in'
 >
 declare function where<Model, Key extends keyof Model>(
   field: DocId,
@@ -17,7 +17,7 @@ declare function where<Model, Key extends keyof Model>(
 ): WhereQuery<Model>
 declare function where<Model, Key extends keyof Model>(
   field: Key | [Key] | DocId,
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: string[]
 ): WhereQuery<Model>
 declare function where<Model, Key extends keyof Model>(
@@ -37,7 +37,7 @@ declare function where<
 ): WhereQuery<Model>
 declare function where<Model, Key extends keyof Model>(
   field: Key | [Key],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key][]
 ): WhereQuery<Model>
 declare function where<
@@ -66,7 +66,7 @@ declare function where<
   Key2 extends keyof Model[Key1]
 >(
   field: [Key1, Key2],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][]
 ): WhereQuery<Model>
 declare function where<
@@ -98,7 +98,7 @@ declare function where<
   Key3 extends keyof Model[Key1][Key2]
 >(
   field: [Key1, Key2, Key3],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][]
 ): WhereQuery<Model>
 declare function where<
@@ -133,7 +133,7 @@ declare function where<
   Key4 extends keyof Model[Key1][Key2][Key3]
 >(
   field: [Key1, Key2, Key3, Key4],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][]
 ): WhereQuery<Model>
 declare function where<
@@ -171,7 +171,7 @@ declare function where<
   Key5 extends keyof Model[Key1][Key2][Key3][Key4]
 >(
   field: [Key1, Key2, Key3, Key4, Key5],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][Key5][]
 ): WhereQuery<Model>
 declare function where<
@@ -212,7 +212,7 @@ declare function where<
   Key6 extends keyof Model[Key1][Key2][Key3][Key4][Key5]
 >(
   field: [Key1, Key2, Key3, Key4, Key5, Key6],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][Key5][Key6][]
 ): WhereQuery<Model>
 declare function where<
@@ -256,7 +256,7 @@ declare function where<
   Key7 extends keyof Model[Key1][Key2][Key3][Key4][Key5][Key6]
 >(
   field: [Key1, Key2, Key3, Key4, Key5, Key6, Key7],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7][]
 ): WhereQuery<Model>
 declare function where<
@@ -303,7 +303,7 @@ declare function where<
   Key8 extends keyof Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7]
 >(
   field: [Key1, Key2, Key3, Key4, Key5, Key6, Key7, Key8],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7][Key8][]
 ): WhereQuery<Model>
 declare function where<
@@ -353,7 +353,7 @@ declare function where<
   Key9 extends keyof Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7][Key8]
 >(
   field: [Key1, Key2, Key3, Key4, Key5, Key6, Key7, Key8, Key9],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7][Key8][Key9][]
 ): WhereQuery<Model>
 declare function where<
@@ -406,7 +406,7 @@ declare function where<
   Key10 extends keyof Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7][Key8][Key9]
 >(
   field: [Key1, Key2, Key3, Key4, Key5, Key6, Key7, Key8, Key9, Key10],
-  filter: 'in',
+  filter: 'in' | 'not-in',
   value: Model[Key1][Key2][Key3][Key4][Key5][Key6][Key7][Key8][Key9][Key10][]
 ): WhereQuery<Model>
 export { where }

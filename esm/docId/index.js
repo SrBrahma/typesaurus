@@ -1,6 +1,6 @@
 class DocId {
     constructor() {
-        /** Just to not let the class empty, which was causing a typescript bug. */
+        /** Just to not let the class empty, which was causing a TS bug - #103 */
         this._metaDocId = 0;
     }
 }
