@@ -17,8 +17,8 @@ declare function where<Model, Key extends keyof Model>(
 ): WhereQuery<Model>
 declare function where<Model, Key extends keyof Model>(
   field: Key | [Key] | DocId,
-  filter: 'in' | 'not-in',
-  value: string[]
+  filter: 'in',
+  value: string[] | readonly string[]
 ): WhereQuery<Model>
 declare function where<Model, Key extends keyof Model>(
   field: Key | [Key],

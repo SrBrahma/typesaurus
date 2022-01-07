@@ -8,7 +8,7 @@ export interface WhereQuery<_Model> {
 }
 export declare type BasicWhereFilter = Exclude<FirestoreWhereFilterOp, 'array-contains' | 'in' | 'not-in'>;
 declare function where<Model, Key extends keyof Model>(field: DocId, filter: BasicWhereFilter, value: string): WhereQuery<Model>;
-declare function where<Model, Key extends keyof Model>(field: Key | [Key] | DocId, filter: 'in' | 'not-in', value: string[]): WhereQuery<Model>;
+declare function where<Model, Key extends keyof Model>(field: Key | [Key] | DocId, filter: 'in', value: string[] | readonly string[]): WhereQuery<Model>;
 declare function where<Model, Key extends keyof Model>(field: Key | [Key], filter: BasicWhereFilter, value: Model[Key]): WhereQuery<Model>;
 declare function where<Model, Key extends keyof Model, ValueArray extends Model[Key], ValueType extends keyof ValueArray>(field: Key | [Key], filter: 'array-contains', value: ValueArray[ValueType]): WhereQuery<Model>;
 declare function where<Model, Key extends keyof Model>(field: Key | [Key], filter: 'in' | 'not-in', value: Model[Key][]): WhereQuery<Model>;
