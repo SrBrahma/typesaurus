@@ -22,8 +22,8 @@ function where<Model, Key extends keyof Model>(
 // in variation
 function where<Model, Key extends keyof Model>(
   field: Key | [Key] | DocId,
-  filter: 'in' | 'not-in',
-  value: string[]
+  filter: 'in',
+  value: string[] | readonly string[]
 ): WhereQuery<Model>
 
 // Basic filter variation
