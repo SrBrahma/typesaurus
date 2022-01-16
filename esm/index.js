@@ -26,4 +26,5 @@ export * from './update';
 export * from './upset';
 export * from './value';
 export * from './where';
+export * from './settings';
 //# sourceMappingURL=index.js.map

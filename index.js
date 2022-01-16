@@ -64,4 +64,5 @@ __exportStar(require('./update'), exports)
 __exportStar(require('./upset'), exports)
 __exportStar(require('./value'), exports)
 __exportStar(require('./where'), exports)
+__exportStar(require('./settings'), exports)
 //# sourceMappingURL=index.js.map

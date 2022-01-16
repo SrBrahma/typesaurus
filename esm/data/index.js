@@ -1,4 +1,5 @@
 import { pathToRef, refToFirestoreDocument } from '../ref';
+import { Settings } from '../settings';
 /**
  * Converts Typesaurus data to Firestore format. It deeply traverse all the data and
  * converts values to compatible format.
@@ -39,7 +40,7 @@ export function unwrapData(adaptor, data) {
         });
         return unwrappedObject;
     }
-    else if (data === undefined) {
+    else if (data === undefined && Settings.undefinedToNull) {
         return null;
     }
     else {

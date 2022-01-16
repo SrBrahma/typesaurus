@@ -2,6 +2,7 @@
 Object.defineProperty(exports, '__esModule', { value: true })
 exports.wrapData = exports.unwrapData = void 0
 const ref_1 = require('../ref')
+const settings_1 = require('../settings')
 /**
  * Converts Typesaurus data to Firestore format. It deeply traverse all the data and
  * converts values to compatible format.
@@ -43,7 +44,7 @@ function unwrapData(adaptor, data) {
       unwrappedObject[key] = unwrapData(adaptor, unwrappedObject[key])
     })
     return unwrappedObject
-  } else if (data === undefined) {
+  } else if (data === undefined && settings_1.Settings.undefinedToNull) {
     return null
   } else {
     return data
