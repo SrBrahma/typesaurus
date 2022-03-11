@@ -1,3 +1,6 @@
+FORK UPDATE:
+You may also install this fork with `npm i typesaurus-srbrahma`. Did this because my Firebase wasn't liking to install from a git link.
+
 # 🦕 Typesaurus
 
 TypeScript-first ODM for Firestore.
